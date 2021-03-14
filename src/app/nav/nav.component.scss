@@ -1,0 +1,54 @@
+@import "../../_variables.scss";
+
+.router-container {
+  display: block;
+  width: 100%;
+  font-family: $title-font;
+
+  .test-desktop {
+    display: none;
+  }
+
+  .link-div {
+    background-color: gray;
+    height: 13vh;
+    text-align: center;
+
+    > a {
+      margin: auto;
+      line-height: 13vh;
+      color: $white;
+      text-decoration: none;
+      letter-spacing: 1.5px;
+      font-size: 20px;
+    }
+  }
+
+  .talent-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    font-family: $content-font;
+    color: $brown;
+    font-size: 12px;
+    margin-bottom: 2vh;
+  }
+}
+
+
+
+// tablet / mobile
+@media only screen and (max-width: 799px) {
+
+  .router-container {
+    width: 100%;
+  }
+}
+
+// desktop
+@media only screen and (min-width: 800px) {
+
+  .router-container {
+    // width: 10%;
+  }
+}
