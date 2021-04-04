@@ -2,13 +2,19 @@
 
 
 
-    <h1 class="name">
+    <!-- <h1 class="name">
       Jess Morris
-    </h1>
+    </h1> -->
 
     <hr>
 
-    <nav></nav>
+    <div class="talent-container">
+      <p *ngFor="let talent of talents">{{ talent }}</p>
+    </div>
+
+    <div class="mobile-nav">
+      <nav></nav>
+    </div>
 
 
 </div>

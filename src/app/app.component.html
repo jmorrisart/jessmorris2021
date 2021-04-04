@@ -4,11 +4,18 @@
   <nav></nav>
 </div> -->
 <div class="container">
-  <div class="header"></div>
+  <div class="header">
+    <nav class="desktop-nav"></nav>
+  </div>
   <div class="icon-container">
-    <h1>JM</h1>
+    <h1>
+      <a routerLink="/" routerLinkActive="active">JM</a>
+    </h1>
   </div>
 
+  <h1 class="name">
+    {{ titleArr.title }}
+  </h1>
   <div class="content-container">
     <router-outlet></router-outlet>
   </div>

@@ -1,6 +1,19 @@
 @import "../../_variables.scss";
 
 .home-container {
+
+  .name {
+    color: $brown;
+  }
+
+  .talent-container {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-around;
+    font-family: $content-font;
+    color: $brown;
+    margin-bottom: 2vh;
+  }
 }
 
 
@@ -12,6 +25,7 @@
     width: 100%;
 
     .name {
+      grid-column: 1 / span 6;
       font-size: 30px;
       text-align: center;
       margin: 0;
@@ -20,6 +34,14 @@
     hr {
       display: none;
     }
+
+    .talent-container {
+      font-size: 12px;
+    }
+
+    .mobile-nav {
+      display: block;
+    }
   }
 }
 
@@ -27,13 +49,27 @@
 @media only screen and (min-width: 800px) {
 
   .home-container {
-    // width: 10%;
 
     .name {
+      grid-column: 2 / span 10;
       font-size: 150px;
-      margin-top: 0;
+      margin-top: 0.5em;
       margin-bottom: 0;
       text-align: center;
+    }
+
+    hr {
+      width: 60%;
+      margin-top: 2em;
+    }
+
+    .talent-container {
+      font-size: 20px;
+      margin-top: 2em;
+    }
+
+    .mobile-nav {
+      display: none;
     }
   }
 }
