@@ -12,15 +12,17 @@
       <a routerLink="/" routerLinkActive="active">JM</a>
     </h1>
   </div>
-
-  <h1 class="name">
-    {{ titleArr.title }}
-  </h1>
   <div class="content-container">
     <router-outlet></router-outlet>
   </div>
+
+  <!-- <div class="mobile-menu"> -->
+    <div class="mobile-menu-container">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </div>
+  <!-- </div> -->
 </div>
 
-<div class="footer">
+<!-- <div class="footer">
   <p>© Jess Morris 2021</p>
-</div>
+</div> -->

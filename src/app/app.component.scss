@@ -29,10 +29,6 @@
       }
     }
   }
-
-  // .name {
-  //   color: $brown;
-  // }
 }
 
 .footer {
@@ -66,16 +62,33 @@
       margin-top: -60px;
     }
 
-    // .name {
-    //   grid-column: 1 / span 6;
-    //   font-size: 30px;
-    //   text-align: center;
-    //   margin: 0;
-    // }
-
     .content-container {
       grid-column: 2 / span 4;
     }
+
+    .mobile-menu-container {
+      background-color: $brown;
+      border-radius: 50%;
+      height: 150px;
+      width: 150px;
+      grid-column: 1 / span 6;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      bottom: 0;
+      margin-bottom: -75px;
+
+      > fa-icon {
+        text-align: center;
+        font-size: 40px;
+        margin: auto;
+        margin-top: 20px;
+        color: $white;
+      }
+    }
+
   }
 
 }
@@ -97,19 +110,16 @@
       grid-column: 2 / span 1;
     }
 
-    // .name {
-    //   grid-column: 2 / span 10;
-    //   font-size: 150px;
-    //   margin-top: 0.5em;
-    //   margin-bottom: 0;
-    //   text-align: center;
-    // }
-
     .content-container {
       grid-column: 2 / span 10;
+    }
 
+    .mobile-menu-container {
+      display: none;
     }
 
   }
+
+
 
 }
