@@ -2,6 +2,7 @@ import { Component, HostListener, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
 
 import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { AppService } from './app.service';
 
 @Component({
   selector: 'app-root',
@@ -14,21 +15,15 @@ export class AppComponent {
   public innerWidth: any;
   public menuDivWidth: any;
   public menuMarginLeft: any;
+  public route: any;
 
+  // Handle the centering of the mobile menu option when user resizes screen
   @HostListener('window:resize', ['$event'])
     onResize(event: any) {
-      this.innerWidth = window.innerWidth;
+      this.appService.responsiveMobileMenuStyling();
     }
 
-  constructor( private router: Router, private activatedRoute: ActivatedRoute ) {}
+  constructor( public router: Router, private activatedRoute: ActivatedRoute, private appService: AppService ) {}
 
-  ngOnInit(): void {
-    this.innerWidth = window.innerWidth;
-    this.menuDivWidth = $('.mobile-menu-container').width();
-    this.menuMarginLeft = (this.innerWidth - this.menuDivWidth) / 2 ;
-
-    $('.mobile-menu-container').css({
-      marginLeft: this.menuMarginLeft
-    });
-  }
+  ngOnInit(): void {}
 }

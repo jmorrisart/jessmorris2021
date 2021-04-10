@@ -1,8 +1,3 @@
-<!-- <div class="container">
-  <home></home>
-  <br>
-  <nav></nav>
-</div> -->
 <div class="container">
   <div class="header">
     <nav class="desktop-nav"></nav>
@@ -16,11 +11,9 @@
     <router-outlet></router-outlet>
   </div>
 
-  <!-- <div class="mobile-menu"> -->
-    <div class="mobile-menu-container">
-      <fa-icon [icon]="faBars"></fa-icon>
-    </div>
-  <!-- </div> -->
+  <div *ngIf="router.url != '/'" class="mobile-menu-container">
+    <fa-icon [icon]="faBars"></fa-icon>
+  </div>
 </div>
 
 <!-- <div class="footer">
