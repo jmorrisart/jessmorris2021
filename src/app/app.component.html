@@ -11,9 +11,19 @@
     <router-outlet></router-outlet>
   </div>
 
-  <div *ngIf="router.url != '/'" class="mobile-menu-container">
-    <fa-icon [icon]="faBars"></fa-icon>
+  <div class="menu-all">
+    <div *ngIf="router.url != '/'" class="mobile-menu-container">
+      <fa-icon [icon]="faBars"></fa-icon>
+    </div>
+    <div class="mobile-menu">
+      <a href="#">Home</a>
+      <a href="#">About</a>
+      <a href="#">Portfolio</a>
+      <a href="#">Blog</a>
+      <a href="#">Contact</a>
+    </div>
   </div>
+
 </div>
 
 <!-- <div class="footer">
