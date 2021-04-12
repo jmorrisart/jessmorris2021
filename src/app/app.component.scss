@@ -104,6 +104,7 @@
         > .span-hamburger-container {
           margin-top: -40%;
           transition: transform 0.5s;
+          z-index: 1000;
 
           > input {
             display: block;
