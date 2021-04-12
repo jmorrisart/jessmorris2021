@@ -2,18 +2,35 @@
 
 .home-container {
 
-  .name {
-    color: $brown;
+  .animate-reveal {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+    -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+    animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+
+    -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+
+    .name {
+      color: $brown;
+    }
+
+    .talent-container {
+      width: 100%;
+      display: inline-flex;
+      justify-content: space-around;
+      font-family: $content-font;
+      color: $brown;
+      margin-bottom: 2vh;
+    }
   }
 
-  .talent-container {
-    width: 100%;
-    display: inline-flex;
-    justify-content: space-around;
-    font-family: $content-font;
-    color: $brown;
-    margin-bottom: 2vh;
-  }
+
 }
 
 

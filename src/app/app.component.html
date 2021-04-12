@@ -15,7 +15,7 @@
     <div class="mobile-menu-container">
       <!-- <fa-icon [icon]="faBars"></fa-icon> -->
       <div (click)="shiftDivRight()" class="span-hamburger-container">
-        <input type="checkbox" />
+        <input class="hamburger-menu-checkbox" type="checkbox" />
         <span></span>
         <span></span>
         <span></span>
@@ -23,11 +23,11 @@
 
     </div>
     <div class="mobile-menu">
-      <a routerLink="/">Home</a>
-      <a routerLink="/about">About</a>
-      <a routerLink="/portfolio">Portfolio</a>
-      <a routerLink="/blog">Blog</a>
-      <a routerLink="/contact">Contact</a>
+      <a (click)="setMenuClickedFalse()" routerLink="/">Home</a>
+      <a (click)="setMenuClickedFalse()" routerLink="/about">About</a>
+      <a (click)="setMenuClickedFalse()" routerLink="/portfolio">Portfolio</a>
+      <a (click)="setMenuClickedFalse()" routerLink="/blog">Blog</a>
+      <a (click)="setMenuClickedFalse()" routerLink="/contact">Contact</a>
     </div>
   </div>
 

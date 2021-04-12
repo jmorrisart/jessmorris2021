@@ -41,12 +41,24 @@ export class AppComponent {
         transform: 'translate(0, -410px)'
       });
     } else {
-      $('.span-hamburger-container').css({
-        transform: 'translate(0px, 0px)'
-      });
-      $('.menu-all').css({
-        transform: 'translate(0, 0)'
-      })
+      this.closeMobileMenu();
     }
+  }
+
+  // close the mobile menu
+  closeMobileMenu() {
+    $('.span-hamburger-container').css({
+      transform: 'translate(0px, 0px)'
+    });
+    $('.menu-all').css({
+      transform: 'translate(0, 0)'
+    })
+  }
+
+  // set to false when user selects menu option on mobile
+  setMenuClickedFalse() {
+    this.menuClicked = false;
+    $('.hamburger-menu-checkbox').prop('checked', false)
+    this.closeMobileMenu();
   }
 }
