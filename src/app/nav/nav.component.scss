@@ -10,20 +10,22 @@
   }
 
   .mobile-link-container {
-    .link-div {
-      background-color: gray;
-      height: 13vh;
-      text-align: center;
 
-      > a {
+    a {
+      text-decoration: none;
+      
+      > .link-div {
+        background-color: gray;
+        height: 13vh;
+        text-align: center;
         margin: auto;
         line-height: 13vh;
         color: $white;
-        text-decoration: none;
         letter-spacing: 1.5px;
         font-size: 20px;
       }
     }
+
 
     .fade-in {
       opacity: 0;

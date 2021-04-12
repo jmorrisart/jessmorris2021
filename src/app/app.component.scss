@@ -100,11 +100,11 @@
         justify-content: center;
         bottom: 0;
         margin-bottom: -75px;
+        z-index: 1000;
 
         > .span-hamburger-container {
           margin-top: -40%;
           transition: transform 0.5s;
-          z-index: 1000;
 
           > input {
             display: block;
@@ -176,6 +176,7 @@
         padding-top: 20px;
         padding-bottom: 20px;
         -webkit-font-smoothing: antialiased;
+        z-index: 999;
 
         > a {
           text-decoration: none;
