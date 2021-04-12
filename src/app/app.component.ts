@@ -11,11 +11,12 @@ import { AppService } from './app.service';
 })
 export class AppComponent {
   title = 'jessmorris2021';
-  faBars = faBars;
+  // faBars = faBars; not needed but keeping for reference
   public innerWidth: any;
   public menuDivWidth: any;
   public menuMarginLeft: any;
   public route: any;
+  public menuClicked: any;
 
   // Handle the centering of the mobile menu option when user resizes screen
   @HostListener('window:resize', ['$event'])
@@ -25,5 +26,27 @@ export class AppComponent {
 
   constructor( public router: Router, private activatedRoute: ActivatedRoute, private appService: AppService ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.menuClicked = false;
+  }
+
+  // handle the movement of the mobile menu
+  shiftDivRight() {
+    this.menuClicked = !this.menuClicked;
+    if(this.menuClicked) {
+      $('.span-hamburger-container').css({
+        transform: 'translate(3px, 0px)'
+      });
+      $('.menu-all').css({
+        transform: 'translate(0, -410px)'
+      });
+    } else {
+      $('.span-hamburger-container').css({
+        transform: 'translate(0px, 0px)'
+      });
+      $('.menu-all').css({
+        transform: 'translate(0, 0)'
+      })
+    }
+  }
 }
