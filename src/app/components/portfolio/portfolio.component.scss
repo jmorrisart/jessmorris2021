@@ -22,7 +22,7 @@
 @media only screen and (max-width: 799px) {
   .portfolio-container {
     h2 {
-      font-size: 30px;
+      font-size: $title-font-size-mobile;
     }
 
     .mobile-portfolio-links-container {
@@ -91,7 +91,7 @@
 @media only screen and (min-width: 800px) {
   .portfolio-container {
     h2 {
-      font-size: 75px;
+      font-size: $title-font-size-desktop;
     }
   }
 

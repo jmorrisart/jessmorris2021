@@ -43,7 +43,7 @@
 
     .name {
       grid-column: 1 / span 6;
-      font-size: 30px;
+      font-size: $title-font-size-mobile;
       text-align: center;
       margin: 0;
     }

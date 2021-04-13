@@ -26,7 +26,7 @@
 @media only screen and (max-width: 799px) {
   .about-container {
     h2 {
-      font-size: 30px;
+      font-size: $title-font-size-mobile;
     }
   }
 }
@@ -36,7 +36,7 @@
 @media only screen and (min-width: 800px) {
   .about-container {
     h2 {
-      font-size: 75px;
+      font-size: $title-font-size-desktop;
     }
   }
 
