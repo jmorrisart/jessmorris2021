@@ -7,7 +7,7 @@
   opacity: 0;
   -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
   -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
-  animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+  animation: fadeIn ease-in 1, scrollIn ease-in 1;
 
   -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
   -moz-animation-fill-mode: forwards;
@@ -16,6 +16,65 @@
   -webkit-animation-duration: 0.5s;
   -moz-animation-duration: 0.5s;
   animation-duration: 0.5s;
+
+  .portfolio-links-container {
+    a {
+      text-decoration: none;
+      font-family: $title-font;
+
+      > .link-div {
+        background-color: gray;
+        height: 13vh;
+        text-align: center;
+        margin: auto;
+        line-height: 13vh;
+        color: $white;
+        letter-spacing: 1.5px;
+        margin-top: 1em;
+      }
+    }
+
+
+    .fade-in {
+      opacity: 0;
+      -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+      -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+      animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+
+      -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+      -moz-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+
+      -webkit-animation-duration: 0.5s;
+      -moz-animation-duration: 0.5s;
+      animation-duration: 0.5s;
+    }
+
+    .fade-in-one {
+        -webkit-animation-delay: 0.5s;
+        -moz-animation-delay: 0.5s;
+        animation-delay: 0.5s;
+      }
+
+      .fade-in-two {
+        -webkit-animation-delay: 0.7s;
+        -moz-animation-delay: 0.7s;
+        animation-delay: 0.7s;
+      }
+
+      .fade-in-three {
+        -webkit-animation-delay: 0.9s;
+        -moz-animation-delay: 0.9s;
+        animation-delay: 0.9s;
+      }
+
+      .fade-in-four {
+        -webkit-animation-delay: 1.1s;
+        -moz-animation-delay: 1.1s;
+        animation-delay: 1.1s;
+      }
+  }
+
 }
 
 // tablet / mobile
@@ -25,63 +84,19 @@
       font-size: $title-font-size-mobile;
     }
 
-    .mobile-portfolio-links-container {
+    hr {
+      display: none;
+    }
 
+    .portfolio-links-container {
+      width: 100%;
 
-        a {
-          text-decoration: none;
+      > a {
 
-          > .link-div {
-            background-color: gray;
-            height: 13vh;
-            text-align: center;
-            margin: auto;
-            line-height: 13vh;
-            color: $white;
-            letter-spacing: 1.5px;
-            font-size: 20px;
-          }
+        > .link-div {
+          font-size: 20px;
         }
-
-
-        .fade-in {
-          opacity: 0;
-        	-webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
-        	-moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
-        	animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
-
-        	-webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-        	-moz-animation-fill-mode: forwards;
-        	animation-fill-mode: forwards;
-
-        	-webkit-animation-duration: 0.5s;
-        	-moz-animation-duration: 0.5s;
-        	animation-duration: 0.5s;
-        }
-
-        .fade-in-one {
-            -webkit-animation-delay: 0.5s;
-            -moz-animation-delay: 0.5s;
-            animation-delay: 0.5s;
-          }
-
-          .fade-in-two {
-            -webkit-animation-delay: 0.7s;
-            -moz-animation-delay: 0.7s;
-            animation-delay: 0.7s;
-          }
-
-          .fade-in-three {
-            -webkit-animation-delay: 0.9s;
-            -moz-animation-delay: 0.9s;
-            animation-delay: 0.9s;
-          }
-
-          .fade-in-four {
-            -webkit-animation-delay: 1.1s;
-            -moz-animation-delay: 1.1s;
-            animation-delay: 1.1s;
-          }
+      }
     }
   }
 }
@@ -92,6 +107,24 @@
   .portfolio-container {
     h2 {
       font-size: $title-font-size-desktop;
+    }
+
+    hr {
+      width: 60%;
+      margin-top: 2em;
+      color: $brown;
+    }
+
+    .portfolio-links-container {
+      width: 60%;
+      margin-left: 20%;
+
+      > a {
+
+        > .link-div {
+          font-size: 30px;
+        }
+      }
     }
   }
 

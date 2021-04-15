@@ -1,17 +1,58 @@
 @import "../../../../_variables.scss";
 
 .design-container {
+  color: $brown;
   text-align: center;
+
+  opacity: 0;
+  -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+  -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+  animation: fadeIn ease-in 1, scrollLeft ease-in 1;
+
+  -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  -moz-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+
+  -webkit-animation-duration: 0.5s;
+  -moz-animation-duration: 0.5s;
+  animation-duration: 0.5s;
+
+  > h2 > span > a {
+    text-decoration: none;
+    color: $brown;
+  }
 }
 
 
 // tablet / mobile
 @media only screen and (max-width: 799px) {
 
+  .design-container {
+    h2 {
+      font-size: $title-font-size-mobile;
+    }
+  }
+
 }
 
 
 // desktop
 @media only screen and (min-width: 800px) {
-  
+
+  .design-container {
+    h2 {
+      font-size: $title-font-size-desktop;
+      line-height: $title-font-size-desktop;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      > span fa-icon {
+        font-size: 50px;
+        margin-left: -70px;
+        padding-right: 20px;
+      }
+    }
+  }
+
 }
