@@ -4,25 +4,55 @@
   <hr class="fade-in fade-in-one">
   <p class="fade-in fade-in-one">I would love to hear from you!</p>
 
-  <form>
+  <form (ngSubmit)="processForm()">
 
     <div class="field fade-in fade-in-two">
       <label for="name">Name*</label>
-      <input type="text" name="name" class="input">
+      <input
+        type="text"
+        name="name"
+        class="input"
+        [(ngModel)]="name"
+        #nameInput="ngModel"
+        required>
+
+      <div class="help" *ngIf="nameInput.invalid && nameInput.dirty">
+        Name is required.
+      </div>
     </div>
 
     <br>
 
     <div class="field fade-in fade-in-two">
       <label for="email">Email*</label>
-      <input type="email" name="email" class="input">
+      <input
+        type="email"
+        name="email"
+        class="input"
+        [(ngModel)]="email"
+        #emailInput="ngModel"
+        email
+        required>
+    </div>
+
+    <div class="help" *ngIf="emailInput.invalid && emailInput.dirty">
+      Email must be valid.
     </div>
 
     <br>
 
     <div class="field fade-in fade-in-two">
       <label for="message">Message*</label>
-      <textarea class="textarea" name="message"></textarea>
+      <textarea
+        class="textarea"
+        name="message"
+        [(ngModel)]="message"
+        #messageInput="ngModel"
+        required></textarea>
+    </div>
+
+    <div class="help" *ngIf="messageInput.invalid && messageInput.dirty">
+      Message is required.
     </div>
 
     <br>
