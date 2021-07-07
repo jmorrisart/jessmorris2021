@@ -4,24 +4,50 @@
   color: $brown;
   text-align: center;
 
-  opacity: 0;
-  -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
-  -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
-  animation: fadeIn ease-in 1, scrollLeft ease-in 1;
+  > h2, hr {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+    -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+    animation: fadeIn ease-in 1, scrollLeft ease-in 1;
 
-  -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
-  -moz-animation-fill-mode: forwards;
-  animation-fill-mode: forwards;
+    -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
 
-  -webkit-animation-duration: 0.5s;
-  -moz-animation-duration: 0.5s;
-  animation-duration: 0.5s;
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  }
+
+  .mobile-img-container, .desktop-img-container {
+    opacity: 0;
+    -webkit-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+    -moz-animation: fadeIn ease-in-out 1, scrollIn ease-in-out 1;
+    animation: fadeIn ease-in 1, scrollRight ease-in 1;
+
+    -webkit-animation-fill-mode: forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+    -moz-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+
+    -webkit-animation-duration: 0.5s;
+    -moz-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+  }
 
   > h2 > span > a {
     text-decoration: none;
     color: $brown;
   }
 }
+
+// @keyframes slideIn {
+//   0% {
+//     transform: translateX(500px) scale(.2);
+//   }
+//   100% {
+//     transform: translateX(0px) scale(1);
+//   }
+// }
 
 
 // tablet / mobile
@@ -30,7 +56,32 @@
   .development-container {
     h2 {
       font-size: $title-font-size-mobile;
+
+      > fa-icon {
+        font-size: $title-font-size-mobile;
+        margin-left: -40px;
+        padding-right: 10px;
+      }
     }
+
+    hr {
+      display: none;
+    }
+
+    .mobile-img-container {
+      .img-placeholder {
+        width: 60%;
+        height: 300px;
+        background-color: rgba($brown, .5);
+        margin: auto;
+        margin-top: 1em;
+      }
+    }
+
+    .desktop-img-container {
+      display: none;
+    }
+
   }
 
 }
@@ -53,6 +104,27 @@
         padding-right: 20px;
       }
     }
+
+    hr {
+      width: 60%;
+      margin-top: 2em;
+      color: $brown;
+    }
+
+    .mobile-img-container{
+      display: none;
+    }
+
+    .desktop-img-container {
+      .img-placeholder {
+        width: 60%;
+        height: 300px;
+        background-color: rgba($brown, .5);
+        margin: auto;
+        margin-top: 1em;
+      }
+    }
+
   }
 
 }
