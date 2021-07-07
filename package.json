@@ -29,6 +29,7 @@
     "rxjs": "~6.6.0",
     "save": "^2.4.0",
     "tslib": "^2.0.0",
+    "waterfall": "^3.0.1",
     "zone.js": "~0.11.3"
   },
   "devDependencies": {

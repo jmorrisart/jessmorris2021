@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-
 import { faChevronCircleLeft } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -13,7 +12,6 @@ export class UxdesignComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }
